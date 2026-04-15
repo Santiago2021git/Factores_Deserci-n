@@ -6,7 +6,7 @@ export default function StatsBar() {
   return (
     <div className="relative z-10 w-full grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
       {[
-        { label: "Variables", value: variables.length, color: "#22d3ee" },
+        { label: "Pestañas", value: variables.length, color: "#22d3ee" },
         { label: "Gráficas", value: totalCharts, color: "#8b5cf6" },
         { label: "Análisis", value: totalCharts, color: "#10b981" },
         { label: "Dataset", value: "ESP", color: "#f59e0b" },

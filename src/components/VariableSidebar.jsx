@@ -5,7 +5,7 @@ export default function VariableSidebar({ variables, activeId, onSelect }) {
     <aside className="relative z-10 w-full lg:w-64 xl:w-72 flex-shrink-0">
       <div className="glass rounded-2xl p-4 sticky top-6">
         <p className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-4 px-1">
-          Variables Dataset
+          Graficadora
         </p>
         <nav className="flex flex-col gap-1.5">
           {variables.map((v, i) => {

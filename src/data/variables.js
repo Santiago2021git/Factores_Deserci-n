@@ -157,6 +157,27 @@ export const variables = [
         image: "/charts/age_moda.png",     // ← coloca tu imagen aquí
         analysis:
           "analisis",
+      },
+      {
+        id: "Edad-Quartil",
+        title: "Quartiles",
+        image: "/charts/avanzadas/age_cuartiles.png",     // ← coloca tu imagen aquí
+        analysis:
+          "analisis",
+      },
+      {
+        id: "Edad-Min_Max",
+        title: "Min - Max",
+        image: "/charts/avanzadas/age_minmax.png",     // ← coloca tu imagen aquí
+        analysis:
+          "analisis",
+      },
+      {
+        id: "Edad-Varianza",
+        title: "Varianza",
+        image: "/charts/avanzadas/age_varianza_std.png",     // ← coloca tu imagen aquí
+        analysis:
+          "analisis",
       }
     ],
   },
@@ -198,7 +219,29 @@ export const variables = [
         image: "/charts/class_attendance_moda.png",
         analysis:
           "Analisis",
-      }
+      },
+
+      {
+        id: "Atencion_clase-Cuartiles",
+        title: "Grafica cuartiles",
+        image: "/charts/avanzadas/class_attendance_cuartiles.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "Atencion_clase-MinMax",
+        title: "Min - Max",
+        image: "/charts/avanzadas/class_attendance_minmax.png",
+        analysis:
+          "Analisis",
+      },
+            {
+        id: "Atencion_clase-varianza",
+        title: "Varianza",
+        image: "/charts/avanzadas/class_attendance_varianza_std.png",
+        analysis:
+          "Analisis",
+      },
     ],
   },
 
@@ -288,6 +331,27 @@ export const variables = [
         id: "exam_score_moda",
         title: "Grafica Moda",
         image: "/charts/exam_score_moda.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "exam_score_cuartiles",
+        title: "Grafica Cuartiles",
+        image: "/charts/avanzadas/exam_score_cuartiles.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "exam_score_minmax",
+        title: "Min - Max",
+        image: "/charts/avanzadas/exam_score_minmax.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "exam_score_varianza",
+        title: "Grafica Varianza",
+        image: "/charts/avanzadas/exam_score_varianza_std.png",
         analysis:
           "Analisis",
       }
@@ -401,6 +465,27 @@ export const variables = [
         image: "/charts/sleep_hours_moda.png",
         analysis:
           "Analisis",
+      },
+      {
+        id: "sleep_hours_cuartiles",
+        title: "Grafica Cuartiles",
+        image: "/charts/avanzadas/sleep_hours_cuartiles.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "sleep_hours_minmax",
+        title: "Min - Max",
+        image: "/charts/avanzadas/sleep_hours_minmax.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "sleep_hours_varianza",
+        title: "Grafica Varianza",
+        image: "/charts/avanzadas/sleep_hours_varianza_std.png",
+        analysis:
+          "Analisis",
       }
     ],
   },
@@ -463,6 +548,27 @@ export const variables = [
         image: "/charts/study_hours_moda.png",
         analysis:
           "Analisis",
+      },
+      {
+        id: "study_hours_cuartil",
+        title: "Grafico Cuartiles",
+        image: "/charts/avanzadas/study_hours_cuartiles.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "study_hours_minmax",
+        title: "Min - Max",
+        image: "/charts/avanzadas/study_hours_minmax.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "study_hours_varianza",
+        title: "Grafico Varianza",
+        image: "/charts/avanzadas/study_hours_varianza_std.png",
+        analysis:
+          "Analisis",
       }
     ],
   },
@@ -491,6 +597,43 @@ export const variables = [
     ],
   },
 
+ {
+    id: "Resultados_finales",
+    label: "Resultados finales",
+    color: "orange",
+    description:
+      "Graficas que dan respuesta a los diferentes objetivos del proyecto",
+    charts: [
+      {
+        id: "Correlacion",
+        title: "Mapa de calor - Correlación",
+        image: "/charts/avanzadas/00_correlacion_heatmap.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "Habitos_rendimiento",
+        title: "Habitos de rendimiento",
+        image: "/charts/avanzadas/OBJ1_habitos_rendimiento.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "bienestar_demografia",
+        title: "Bienestar en relación a demografia",
+        image: "/charts/avanzadas/OBJ2_bienestar_demografia.png",
+        analysis:
+          "Analisis",
+      },
+      {
+        id: "jerarquia",
+        title: "Variables que afectan resultado final",
+        image: "/charts/avanzadas/OBJ3_jerarquia_perfiles.png",
+        analysis:
+          "Analisis",
+      },
+    ],
+  },
 ];
 
 // Mapa de colores por variable (no editar)
