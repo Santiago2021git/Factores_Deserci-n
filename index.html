@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard EDA</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind config ANTES del CDN -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Orbitron", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              dark: {
+                900: "#050814",
+                800: "#0a0f1e",
+                700: "#0f1729",
+                600: "#151e35",
+              },
+            },
+            animation: {
+              "fade-up": "fadeUp 0.6s ease forwards",
+              pulse2: "pulse2 3s ease-in-out infinite",
+              float: "float 6s ease-in-out infinite",
+              shimmer: "shimmer 3s linear infinite",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%":   { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              pulse2: {
+                "0%,100%": { boxShadow: "0 0 0 0 rgba(34,211,238,0.3)" },
+                "50%":     { boxShadow: "0 0 30px 8px rgba(34,211,238,0.15)" },
+              },
+              float: {
+                "0%,100%": { transform: "translateY(0px)" },
+                "50%":     { transform: "translateY(-10px)" },
+              },
+              shimmer: {
+                "0%":   { backgroundPosition: "-200% center" },
+                "100%": { backgroundPosition:  "200% center" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Estilos globales que Tailwind CDN no puede generar -->
+    <style>
+      * { box-sizing: border-box; }
+
+      body {
+        background-color: #050814;
+        color: white;
+        font-family: "DM Sans", sans-serif;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #050814; }
+      ::-webkit-scrollbar-thumb { background: rgba(34,211,238,0.3); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(34,211,238,0.6); }
+
+      /* Clases utilitarias custom */
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .glass-hover {
+        transition: all 0.3s ease;
+      }
+      .glass-hover:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(34, 211, 238, 0.3);
+        box-shadow: 0 0 30px rgba(34, 211, 238, 0.1);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .shimmer-text {
+        background: linear-gradient(90deg, #22d3ee 0%, #ffffff 50%, #8b5cf6 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 3s linear infinite;
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .scanline::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent, transparent 2px,
+          rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px
+        );
+        pointer-events: none;
+        border-radius: inherit;
+      }
+      .glow-cyan {
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
