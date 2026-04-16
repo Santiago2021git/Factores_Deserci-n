@@ -4,6 +4,7 @@ import { useState } from "react";
 //  ARCHIVO DE PREGUNTAS FRECUENTES
 //  Edita este arreglo para agregar, quitar o modificar preguntas
 // ══════════════════════════════════════════════════════════════
+
 const FAQ_DATA = [
   {
     category: "Dataset General",
@@ -124,25 +125,35 @@ function FAQItem({ item, index, accentColor }) {
 
   return (
     <div
-      className="rounded-xl overflow-hidden transition-all duration-300"
+      className="rounded-xl transition-all duration-500 ease-in-out"
       style={{
+        // Borde y fondo cambian según el estado
         border: open
-          ? `1px solid ${accentColor}44`
+          ? `1px solid ${accentColor}88`
           : "1px solid rgba(255,255,255,0.06)",
         background: open
-          ? `rgba(${hexToRgb(accentColor)}, 0.05)`
+          ? `rgba(${hexToRgb(accentColor)}, 0.15)`
           : "rgba(255,255,255,0.02)",
-        animationDelay: `${index * 60}ms`,
+        
+        // Prioridad visual: z-index alto cuando está abierto
+        zIndex: open ? 50 : 1,
+        position: "relative",
+        
+        // Efecto sutil de elevación
+        transform: open ? "scale(1.02) translateY(-2px)" : "scale(1) translateY(0)",
+        boxShadow: open 
+          ? `0 12px 30px -10px rgba(0,0,0,0.5), 0 0 20px ${accentColor}22` 
+          : "none",
       }}
     >
       <button
-        onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center justify-between gap-4 px-4 py-3.5 text-left transition-all duration-200"
+        onClick={() => setOpen(!open)} // Toggle: abre y cierra al hacer click
+        className="w-full flex items-center justify-between gap-4 px-4 py-4 text-left focus:outline-none"
       >
         <span
-          className="text-sm font-medium leading-snug"
+          className="text-sm font-medium leading-snug transition-colors duration-300"
           style={{
-            color: open ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.65)",
+            color: open ? "#ffffff" : "rgba(255,255,255,0.65)",
             fontFamily: "DM Sans, sans-serif",
           }}
         >
@@ -151,31 +162,32 @@ function FAQItem({ item, index, accentColor }) {
         <span
           className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs transition-all duration-300"
           style={{
-            background: open ? `${accentColor}22` : "rgba(255,255,255,0.05)",
-            color: open ? accentColor : "rgba(255,255,255,0.3)",
+            background: open ? accentColor : "rgba(255,255,255,0.05)",
+            color: open ? "#000" : "rgba(255,255,255,0.3)",
             transform: open ? "rotate(45deg)" : "rotate(0deg)",
-            border: `1px solid ${open ? accentColor + "44" : "rgba(255,255,255,0.08)"}`,
+            boxShadow: open ? `0 0 10px ${accentColor}66` : "none",
           }}
         >
           +
         </span>
       </button>
 
-      {/* Respuesta */}
+      {/* Contenedor de la Respuesta: Se expande para mostrar TODO el texto */}
       <div
         style={{
-          maxHeight: open ? "300px" : "0",
+          maxHeight: open ? "1000px" : "0", // Valor alto para asegurar que no se corte
+          opacity: open ? 1 : 0,
           overflow: "hidden",
-          transition: "max-height 0.4s cubic-bezier(0.4,0,0.2,1)",
+          transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         <div
-          className="px-4 pb-4 text-sm leading-relaxed"
+          className="px-4 pb-6 text-sm leading-relaxed"
           style={{
-            color: "rgba(255,255,255,0.55)",
+            color: "rgba(255,255,255,0.85)",
             fontFamily: "DM Sans, sans-serif",
-            borderTop: `1px solid ${accentColor}18`,
-            paddingTop: "12px",
+            borderTop: `1px solid ${accentColor}33`,
+            paddingTop: "16px",
           }}
         >
           {item.a}
@@ -347,6 +359,7 @@ export default function FAQ() {
             />
           ))}
         </div>
+        
 
         {/* Footer */}
         <div
