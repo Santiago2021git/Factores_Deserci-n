@@ -12,16 +12,28 @@ const FAQ_DATA = [
     questions: [
       {
         q: "¿Cuál es el origen del dataset?",
-        a: "El dataset fue obtenido de [fuente], contiene información recopilada durante [periodo]. Cuenta con 1.500 observaciones y 8 variables entre cuantitativas y cualitativas.",
+        a: "El dataset fue obtenido de la plataforma Kaggle, contiene información recopilada sobre factores que afectan el rendimiento academico. Cuenta con 20.000 datos y 12 variables entre cuantitativas y cualitativas.",
       },
       {
-        q: "¿Cómo se recolectaron los datos?",
-        a: "Los datos fueron recolectados mediante encuestas directas aplicadas a una muestra representativa. El proceso de recolección siguió un muestreo estratificado por edad y región.",
+        q: "¿Cual es la finalidad del proyecto?",
+        a: "Inicialmente el dataset se centra en tomar en cuenta los diversos factores que pueden afectar a los estudiantes para asi predecir su nota, sin embargo se puede hacer diferentes analisis tomando estos datos y tener en cuenta estudios sobre rendimiento academico y deserción escolar",
       },
       {
         q: "¿El dataset tiene valores faltantes?",
-        a: "Sí, se encontraron 47 valores faltantes distribuidos en 3 variables (3.1% del total). Fueron tratados mediante imputación con la mediana para variables numéricas y la moda para categóricas.",
+        a: "No, es un dataset limpio por defecto y sin valores faltantes ni nulos",
       },
+      {
+        q: "¿Cual es la fecha del estudio?",
+        a: "El estudio es de diciembre de 2025",
+      },
+      {
+        q: "¿Qué tipo de datos predominan en el dataset?",
+        a: "Predominan datos numéricos y categóricos, lo que permite aplicar tanto análisis estadístico como análisis comparativo.",
+      },
+      {
+        q: "¿Cuál es la variable objetivo del estudio?",
+        a: "La variable objetivo es exam_score, ya que representa el rendimiento académico de los estudiantes.",
+      }
     ],
   },
   {
@@ -31,19 +43,19 @@ const FAQ_DATA = [
     questions: [
       {
         q: "¿Cuántas variables tiene el dataset?",
-        a: "El dataset contiene 8 variables en total: 5 cuantitativas (edad, ingreso, horas_trabajo, satisfacción, puntaje) y 3 cualitativas (educación, región, género).",
+        a: "El dataset contiene 13 variables en total: 6 cuantitativas (id, edad, horas_estudio, atención_clase, horas_sueño, exam_score) y 7 cualitativas (genero, curso, acceso_internet, calidad_sueño, metodo_estudio, calificacion_instalaciones, dificultad_examenes).",
       },
       {
         q: "¿Cuál es la variable más importante del análisis?",
-        a: "La variable 'satisfacción' es la variable objetivo del análisis. Las demás actúan como predictoras. Se encontró que 'ingreso' y 'educación' tienen mayor peso explicativo sobre la satisfacción.",
+        a: "Despues del estudio, las variables mas importantes para un mejor rendimiento academico son: Horas de estudio, horas de sueño ",
       },
       {
         q: "¿Qué variable presenta mayor variabilidad?",
-        a: "La variable 'ingreso' presenta el coeficiente de variación más alto (CV=0.87), lo que indica alta dispersión. Esto es típico en variables económicas con distribución asimétrica positiva.",
+        a: "La variable de exam_score es la que presenta mas variabilidad ",
       },
       {
-        q: "¿Se detectaron outliers?",
-        a: "Sí, mediante el método IQR se detectaron 23 valores atípicos, principalmente en las variables 'ingreso' (15) y 'edad' (8). Representan el 1.5% del total y fueron analizados individualmente antes de cualquier tratamiento.",
+        q: "¿Por qué se codificaron variables?",
+        a: "Para poder aplicar análisis cuantitativos y modelos predictivos, ya que los algoritmos requieren datos numéricos.",
       },
     ],
   },
@@ -53,17 +65,32 @@ const FAQ_DATA = [
     color: "#10b981",
     questions: [
       {
-        q: "¿Las variables siguen una distribución normal?",
-        a: "Según la prueba de Shapiro-Wilk (α=0.05), solo 'puntaje' sigue una distribución normal (p=0.32). Las demás variables cuantitativas presentan asimetría significativa, requiriendo pruebas no paramétricas.",
+        q: "¿Existe relación entre horas de estudio y rendimiento?",
+        a: "Sí, se observa una relación positiva: a mayor cantidad de horas de estudio, mejores resultados.",
       },
       {
         q: "¿Existe correlación entre las variables?",
-        a: "Se encontró correlación positiva moderada entre 'ingreso' y 'satisfacción' (r=0.52), y entre 'educación' y 'ingreso' (r=0.44). La correlación entre 'edad' e 'ingreso' es significativa pero no lineal.",
+        a: "Se encontró correlación positiva moderada entre horas de estudio y horas de sueño con un mejor rendimiento academico, factores como edad y genero no influyen en el rendimiento.",
       },
       {
-        q: "¿Qué pruebas estadísticas se aplicaron?",
-        a: "Se aplicaron: Shapiro-Wilk para normalidad, Kruskal-Wallis para comparación de grupos, correlación de Pearson y Spearman, y Chi-cuadrado para variables categóricas. Todos los análisis se realizaron con α=0.05.",
+        q: "¿Cómo influye la calidad del sueño?",
+        a: "Los estudiantes con mejor calidad de sueño tienden a tener mayores puntajes, evidenciando su impacto en el aprendizaje.",
       },
+      {
+        q: "¿La asistencia a clase influye en el rendimiento?",
+        a: "Sí, una mayor asistencia está asociada con mejores resultados académicos.",
+      },
+
+      {
+        q: "¿El método de estudio afecta el desempeño?",
+        a: "Sí, algunos métodos muestran mejores resultados que otros, lo que indica que no todas las estrategias son igual de efectivas.",
+      },
+
+      {
+        q: "¿Las variables demográficas son determinantes?",
+        a: "No son determinantes por sí solas, pero sí pueden generar variaciones en los resultados.",
+      },
+
     ],
   },
   {
@@ -72,17 +99,21 @@ const FAQ_DATA = [
     color: "#f59e0b",
     questions: [
       {
-        q: "¿Cuál es la conclusión principal del análisis?",
-        a: "El nivel educativo y el ingreso son los factores con mayor influencia sobre la satisfacción. Las personas con educación universitaria y mayores ingresos reportan índices de satisfacción entre un 35% y 48% más altos que el promedio general.",
+        q: "¿Cuál es el principal factor que influye en el rendimiento?",
+        a: "No existe un único factor, sino una combinación de variables, tales como horas de estudio, Calidad del sueño y Asistencia",
       },
       {
-        q: "¿Qué recomendaciones surgen del análisis?",
-        a: "Se recomienda: (1) Ampliar la muestra para grupos de edad mayores de 60 años, (2) incluir variables de contexto regional, (3) aplicar modelos de regresión para cuantificar el efecto conjunto de las variables predictoras.",
+        q: "¿Se puede predecir el rendimiento académico?",
+        a: "Sí, mediante la integración de múltiples variables es posible construir un modelo predictivo confiable.",
       },
       {
-        q: "¿Los resultados son generalizables?",
-        a: "Los resultados son representativos para la población objetivo definida en el muestreo. Para generalizar a otras poblaciones se requeriría validación con muestras adicionales de diferentes contextos geográficos.",
+        q: "¿El descanso es realmente importante?",
+        a: "Sí, el descanso adecuado mejora significativamente la capacidad de aprendizaje y el rendimiento.",
       },
+      {
+        q: "¿Cuál es la principal conclusión del estudio?",
+        a: "El rendimiento académico es un fenómeno multifactorial, donde intervienen hábitos personales, condiciones académicas y características individuales.",
+      }
     ],
   },
 ];
@@ -323,7 +354,7 @@ export default function FAQ() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
         >
           <p className="text-[10px] text-white/20" style={{ fontFamily: "DM Sans, sans-serif" }}>
-            Análisis Exploratorio de Datos · {new Date().getFullYear()}
+            Análisis de Datos · {new Date().getFullYear()}
           </p>
         </div>
       </div>
