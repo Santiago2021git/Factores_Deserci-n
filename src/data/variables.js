@@ -135,49 +135,49 @@ export const variables = [
         title: "Grafica de Distribución",
         image: "/charts/age_distribucion.png",  // ← coloca tu imagen aquí
         analysis:
-          "Analisis",
+          "La grafica de distribución nos muestra la mediana, en este caso es: 20, la media del estudio de edad: 20.47 y la moda de edad que es 21",
       },
       {
         id: "Edad-Media",
         title: "Grafica de Media",
         image: "/charts/age_media.png",     // ← coloca tu imagen aquí
         analysis:
-          "Analisis",
+          "Grafica centrada solamente en la media de las edades de los estudiantes, en este caso el resultado es 20.47",
       },
       {
         id: "Edad-Mediana",
         title: "Grafica de Mediana",
         image: "/charts/age_mediana.png",     // ← coloca tu imagen aquí
         analysis:
-          "Analisis",
+          "Grafica que evidencia la mediana de la edad de los 20.000 estudiantes, en este caso es 20. Las lineas de la grafica indican el movimiento entre 18 y 22 años",
       },
       {
         id: "Edad-Moda",
         title: "Grafica de Moda",
         image: "/charts/age_moda.png",     // ← coloca tu imagen aquí
         analysis:
-          "analisis",
+          "La edad que mas se repite en el estudio es 21, se utilizo un grafico de barras horizontal ",
       },
       {
         id: "Edad-Quartil",
         title: "Quartiles",
         image: "/charts/avanzadas/age_cuartiles.png",     // ← coloca tu imagen aquí
         analysis:
-          "analisis",
+          "El estudio se centra en una poblacion entre 18 a 22 años",
       },
       {
         id: "Edad-Min_Max",
         title: "Min - Max",
         image: "/charts/avanzadas/age_minmax.png",     // ← coloca tu imagen aquí
         analysis:
-          "analisis",
+          "La edad minima fue de 17 y maxima de 24",
       },
       {
         id: "Edad-Varianza",
         title: "Varianza",
         image: "/charts/avanzadas/age_varianza_std.png",     // ← coloca tu imagen aquí
         analysis:
-          "analisis",
+          "La varianza calculada en el estudio de las edades es: 5.219, la desviación estandar es de 2.284",
       }
     ],
   },
@@ -197,28 +197,28 @@ export const variables = [
         title: "Grafica Distribucion",
         image: "/charts/class_attendance_distribucion.png",
         analysis:
-          "Analisis",
+          "La grafica de distribución muestra la media, la moda y la mediana",
       },
       {
         id: "Atencion_clase-Media",
         title: "Grafica Media",
         image: "/charts/class_attendance_media.png",
         analysis:
-          "Analisis",
+          "El estudio de la atención en clase indica que la media es 70.02",
       },
       {
         id: "Atencion_clase-Mediana",
         title: "Grafica Mediana",
         image: "/charts/class_attendance_mediana.png",
         analysis:
-          "Analisis",
+          "El estudio indica que la mediana de atención en clase es 69.9",
       },
       {
         id: "Atencion_clase-Moda",
         title: "Grafoca Moda",
         image: "/charts/class_attendance_moda.png",
         analysis:
-          "Analisis",
+          "La moda del valor de atención en clase es 40.60",
       },
 
       {
@@ -226,21 +226,21 @@ export const variables = [
         title: "Grafica cuartiles",
         image: "/charts/avanzadas/class_attendance_cuartiles.png",
         analysis:
-          "Analisis",
+          "Las grafica indican que el porcentaje de atención en clase estae entre 55.1 y 85",
       },
       {
         id: "Atencion_clase-MinMax",
         title: "Min - Max",
         image: "/charts/avanzadas/class_attendance_minmax.png",
         analysis:
-          "Analisis",
+          "El estudio indica que el minimo es 40.60 y maximo 99.4",
       },
             {
         id: "Atencion_clase-varianza",
         title: "Varianza",
         image: "/charts/avanzadas/class_attendance_varianza_std.png",
         analysis:
-          "Analisis",
+          "El estudio de atención en clase nos dio los siguientes resultados: varianza=298.677, la desviacion=17.28",
       },
     ],
   },
@@ -260,14 +260,14 @@ export const variables = [
         title: "Grafica de barras",
         image: "/charts/course_barras.png",
         analysis:
-          "Analisis",
+          "Grafico de barras que muestra los 7 cursos mas destacados en los que participan los estudiantes",
       },
       {
         id: "curso-donut",
         title: "Grafica pie",
         image: "/charts/course_donut.png",
         analysis:
-          "Analisis",
+          "Grafico de pie que muestra los 7 cursos, no hay mucha diferencia entre cursos",
       }
     ],
   },
@@ -287,14 +287,14 @@ export const variables = [
         title: "Grafico de barras",
         image: "/charts/exam_difficulty_barras.png",
         analysis:
-          "",
+          "El grafico de barras de dificultad de examen muestra que la moda es que la dificultad de examenes es moderada",
       },
       {
         id: "pie-exam_dificultad",
         title: "Grafico pie",
         image: "/charts/exam_difficulty_donut.png",
         analysis:
-          "Analisis",
+          "Grafico Pie que muestra las diferentes percepciones de dificultades por los estudiantes",
       },
     ],
   },
@@ -311,49 +311,49 @@ export const variables = [
         title: "Grafica de distribución",
         image: "/charts/exam_score_distribucion.png",
         analysis:
-          "Analisis",
+          "La distribucion muestra que la media es 62.51, la mediana es 62.6 y la moda es 100",
       },
       {
         id: "exam_score_media",
         title: "Grafica Media",
         image: "/charts/exam_score_media.png",
         analysis:
-          "Analisis",
+          "Grafica que muestra los valores en el calculo de la media",
       },
       {
         id: "exam_score_mediana",
         title: "Grafica Mediana",
         image: "/charts/exam_score_mediana.png",
         analysis:
-          "Analisis",
+          "Estudio de la mediana",
       },
       {
         id: "exam_score_moda",
         title: "Grafica Moda",
         image: "/charts/exam_score_moda.png",
         analysis:
-          "Analisis",
+          "grafica donde se muestra el valor mas repetido o moda",
       },
       {
         id: "exam_score_cuartiles",
         title: "Grafica Cuartiles",
         image: "/charts/avanzadas/exam_score_cuartiles.png",
         analysis:
-          "Analisis",
+          "El estudio muestra que las notas se concentran entre 48.8 y 76.3",
       },
       {
         id: "exam_score_minmax",
         title: "Min - Max",
         image: "/charts/avanzadas/exam_score_minmax.png",
         analysis:
-          "Analisis",
+          "El valor minimo es 19.59 y el valor maximo es 100",
       },
       {
         id: "exam_score_varianza",
         title: "Grafica Varianza",
         image: "/charts/avanzadas/exam_score_varianza_std.png",
         analysis:
-          "Analisis",
+          "El estudio realizado dio como resultados: varianza=357.53 y la desviacion=18.91",
       }
     ],
   },
@@ -370,14 +370,14 @@ export const variables = [
         title: "Grafico de barras",
         image: "/charts/facility_rating_barras.png",
         analysis:
-          "Analisis",
+          "El grafico de barras muestra que la moda es calificación media en las instalaciones de las instituciones.",
       },
       {
         id: "facility_rating_donut",
         title: "Grafica Pie",
         image: "/charts/facility_rating_donut.png",
         analysis:
-          "Analisis",
+          "El grafico de dona muestra que no hay mucha diferencia entre las diferentes calificaciones hacia las instalaciones de la institución",
       }
     ],
   },
@@ -394,14 +394,14 @@ export const variables = [
         title: "Grafica de barras",
         image: "/charts/gender_barras.png",
         analysis:
-          "Analisis",
+          "Grafica de barras que muestra que el genero elegido por la mayoria de estudiantes es 'otro'",
       },
       {
         id: "gender_donut",
         title: "Grafico pie",
         image: "/charts/gender_donut.png",
         analysis:
-          "Analisis",
+          "El grafico de dona muestra que no hay diferencia significativa entre las 3 opciones de genero",
       },
     ],
   },
@@ -418,14 +418,14 @@ export const variables = [
         title: "Grafica de barras",
         image: "/charts/internet_access_barras.png",
         analysis:
-          "Analisis",
+          "El grafico de barras muestra que la moda es que los estudiantes si tengan acceso a internet",
       },
       {
         id: "internet_access_donut",
         title: "Grafico pie",
         image: "/charts/internet_access_donut.png",
         analysis:
-          "Analisis",
+          "El grafico de dona evidencia que el 85% de estudiantes cuenta con conexión a interner",
       }
     ],
   },
@@ -443,49 +443,49 @@ export const variables = [
         title: "Grafica de distribución",
         image: "/charts/sleep_hours_distribucion.png",
         analysis:
-          "Analisis",
+          "La grafica de distribución muestra que la moda es 4.10 horas de sueño, la mediana es 7 horas de sueño y la media es de 7.01 horas de sueño en los estudiantes",
       },
       {
         id: "sleep_hours_media",
         title: "Grafica Media",
         image: "/charts/sleep_hours_media.png",
         analysis:
-          "Analisis",
+          "Grafica que muestra la media de horas de sueño de los estudiantes",
       },
       {
         id: "sleep_hours_mediana",
         title: "Grafica Mediana",
         image: "/charts/sleep_hours_mediana.png",
         analysis:
-          "Analisis",
+          "Grafica que evidencia el valor de la mediana en las horas de sueño de los estudiantes",
       },
       {
         id: "sleep_hours_moda",
         title: "Grafica Moda",
         image: "/charts/sleep_hours_moda.png",
         analysis:
-          "Analisis",
+          "Grafica de la moda de hora de sueño en los estudiantes",
       },
       {
         id: "sleep_hours_cuartiles",
         title: "Grafica Cuartiles",
         image: "/charts/avanzadas/sleep_hours_cuartiles.png",
         analysis:
-          "Analisis",
+          "Las horas de sueño de los estudiantes varian entre 5.50 y 8.50",
       },
       {
         id: "sleep_hours_minmax",
         title: "Min - Max",
         image: "/charts/avanzadas/sleep_hours_minmax.png",
         analysis:
-          "Analisis",
+          "el minimo de horas de sueño es 4.1 y el maximo es 9.9 horas",
       },
       {
         id: "sleep_hours_varianza",
         title: "Grafica Varianza",
         image: "/charts/avanzadas/sleep_hours_varianza_std.png",
         analysis:
-          "Analisis",
+          "La grafica nos muestra que la varianza es 3.00, la desviacion estandar es 1.73",
       }
     ],
   },
@@ -502,14 +502,14 @@ export const variables = [
         title: "Grafica de barras",
         image: "/charts/sleep_quality_barras.png",
         analysis:
-          "Analisis",
+          "La grafica de barras muestra que la moda en calidad de sueño es el valor promedio",
       },
       {
         id: "sleep_quality_donut",
         title: "Grafico Pie",
         image: "/charts/sleep_quality_donut.png",
         analysis:
-          "Analisis",
+          "La grafica de dona muestra que no hay diferencia significativa entre los diferentes valores de calidad de sueño",
       }
     ],
   },
@@ -526,49 +526,49 @@ export const variables = [
         title: "Grafica de distribución",
         image: "/charts/study_hours_distribucion.png",
         analysis:
-          "Analisis",
+          "La grafica de distribucion de horas de estudio de los estudiantes muestra que la media es 4.01, la mediana es 4.04 y la moda de horas de estudio es 7.91",
       },
       {
         id: "study_hours_media",
         title: "Grafica Media",
         image: "/charts/study_hours_media.png",
         analysis:
-          "Analisis",
+          "Grafica que representa la media de las horas de estudio diarias de los estudiantes",
       },
       {
         id: "study_hours_mediana",
         title: "Grafico Mediana",
         image: "/charts/study_hours_mediana.png",
         analysis:
-          "Analisis",
+          "Grafica que evidencia el valor de la mediana en las horas de estudio de los estudiantes",
       },
       {
         id: "study_hours_moda",
         title: "Grafico Moda",
         image: "/charts/study_hours_moda.png",
         analysis:
-          "Analisis",
+          "Grafica que muestra el valor que mas se repite o la moda en las horas de sueño de los estudiantes",
       },
       {
         id: "study_hours_cuartil",
         title: "Grafico Cuartiles",
         image: "/charts/avanzadas/study_hours_cuartiles.png",
         analysis:
-          "Analisis",
+          "La información de horas de estudio se centra entre 2 y 6",
       },
       {
         id: "study_hours_minmax",
         title: "Min - Max",
         image: "/charts/avanzadas/study_hours_minmax.png",
         analysis:
-          "Analisis",
+          "El valor minimo de horas de estudio diarias es 0.08 y el valor maximo es 7.91",
       },
       {
         id: "study_hours_varianza",
         title: "Grafico Varianza",
         image: "/charts/avanzadas/study_hours_varianza_std.png",
         analysis:
-          "Analisis",
+          "La varianza es: 5.33, la desviación estandar es 2.31",
       }
     ],
   },
@@ -585,14 +585,14 @@ export const variables = [
         title: "Grafica de barras",
         image: "/charts/study_method_barras.png",
         analysis:
-          "Analisis",
+          "El grafico de barras muestra que la moda en los metodos de estudio es 'Auto-Estudio",
       },
       {
         id: "study_method_donut",
         title: "Grafico pie",
         image: "/charts/study_method_donut.png",
         analysis:
-          "Analisis",
+          "El grafico de donas evidencia los porcentajes y distribución de los diferentes metodos de estudio",
       }
     ],
   },
@@ -609,28 +609,28 @@ export const variables = [
         title: "Mapa de calor - Correlación",
         image: "/charts/avanzadas/00_correlacion_heatmap.png",
         analysis:
-          "Analisis",
+          "El mapa de calor indica que para un maximo rendimiento academico, influye en un 72% las horas de estudio, en un 31% la atención en clase y un 13% las horas de sueño, el resto de variables no influyen tanto",
       },
       {
         id: "Habitos_rendimiento",
         title: "Habitos de rendimiento",
         image: "/charts/avanzadas/OBJ1_habitos_rendimiento.png",
         analysis:
-          "Analisis",
+          "Las graficas indican que donde mas se concentra la tendencia es un mayor rendimiento por horas de estudio y su coeficiente de correlación de Pearson es 71,8% , La asistencia a clase influye pero en menor medida, su coeficiente es del 30.9% ",
       },
       {
         id: "bienestar_demografia",
         title: "Bienestar en relación a demografia",
         image: "/charts/avanzadas/OBJ2_bienestar_demografia.png",
         analysis:
-          "Analisis",
+          "Las horas de sueño influyen en el rendimiento pero en menor medida que otras variables, su coeficiente es de 13.3%. La edad y el genero no influyen en el rendimiento academico y la conexión a internet influye muy poco",
       },
       {
         id: "jerarquia",
         title: "Variables que afectan resultado final",
         image: "/charts/avanzadas/OBJ3_jerarquia_perfiles.png",
         analysis:
-          "Analisis",
+          "El grafico concluye que las 3 variables mas importantes relacionadas a la mejora del rendimiento son: Horas de estudio, asistencia a clase y horas de sueño",
       },
     ],
   },

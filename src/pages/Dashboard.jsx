@@ -5,6 +5,9 @@ import VariableSidebar from "../components/VariableSidebar";
 import VariablePanel from "../components/VariablePanel";
 import StatsBar from "../components/StatsBar";
 import { variables } from "../data/variables";
+import FAQ from "../components/FAQ";
+
+
 
 export default function Dashboard() {
   const [activeId, setActiveId] = useState(variables[0]?.id);
@@ -36,7 +39,7 @@ export default function Dashboard() {
             {activeVar && <VariablePanel variable={activeVar} />}
           </div>
         </main>
-
+        <FAQ /> 
         <footer className="relative z-10 text-center py-4 text-xs text-white/20 font-body border-t border-white/5">
           Dashboard · Análisis de Datos · {new Date().getFullYear()}
         </footer>
