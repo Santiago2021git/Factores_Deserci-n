@@ -609,21 +609,21 @@ export const variables = [
         title: "Mapa de calor - Correlación",
         image: "/charts/avanzadas/00_correlacion_heatmap.png",
         analysis:
-          "El mapa de calor indica que para un maximo rendimiento academico, influye en un 72% las horas de estudio, en un 31% la atención en clase y un 13% las horas de sueño, el resto de variables no influyen tanto",
+          "El mapa de calor indica que para un maximo rendimiento academico, influye en un 0.72 las horas de estudio, en un 0.31 la atención en clase y un 0.13 las horas de sueño, el resto de variables no influyen tanto",
       },
       {
         id: "Habitos_rendimiento",
         title: "Habitos de rendimiento",
         image: "/charts/avanzadas/OBJ1_habitos_rendimiento.png",
         analysis:
-          "Las graficas indican que donde mas se concentra la tendencia es un mayor rendimiento por horas de estudio y su coeficiente de correlación de Pearson es 71,8% , La asistencia a clase influye pero en menor medida, su coeficiente es del 30.9% ",
+          "Las graficas indican que donde mas se concentra la tendencia es un mayor rendimiento por horas de estudio y su coeficiente de correlación de Pearson es 0.71 , La asistencia a clase influye pero en menor medida, su coeficiente es del 0.31 ",
       },
       {
         id: "bienestar_demografia",
         title: "Bienestar en relación a demografia",
         image: "/charts/avanzadas/OBJ2_bienestar_demografia.png",
         analysis:
-          "Las horas de sueño influyen en el rendimiento pero en menor medida que otras variables, su coeficiente es de 13.3%. La edad y el genero no influyen en el rendimiento academico y la conexión a internet influye muy poco",
+          "Las horas de sueño influyen en el rendimiento pero en menor medida que otras variables, su coeficiente es de 0.13. La edad y el genero no influyen en el rendimiento academico y la conexión a internet influye muy poco",
       },
       {
         id: "jerarquia",
